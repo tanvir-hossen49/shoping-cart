@@ -1,0 +1,30 @@
+/**
+* ! Changing defaut styles of the browser
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+/**
+* ! Navbar Styles heres
+**/
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
+  background-color: #212529;
+  color: #fff;
+}
+.cart {
+  background-color: #fff;
+  color: #212529;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 15px;
+}
