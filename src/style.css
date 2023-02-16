@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -17,14 +22,119 @@ body {
 .nav-bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 25px 60px;
   background-color: #212529;
   color: #fff;
+  margin-bottom: 30px;
 }
 .cart {
   background-color: #fff;
   color: #212529;
   font-size: 30px;
   padding: 5px;
-  border-radius: 15px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.cartAmount {
+  background-color: red;
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 3px;
+}
+
+/**
+* ! Shop item Styles heres
+**/
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 233px);
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 233px);
+  }
+}
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 233px);
+  }
+}
+
+.item {
+  border: 1px solid #212529;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.price-quantitye {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-quantitye .button {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+.price-quantitye .button i {
+  cursor: pointer;
+}
+
+/**
+* ! Style rules for shoping cart
+**/
+.shopingCart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+/**
+* ! Styles rules for cart item 
+*/
+.cart-item {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #212529;
+}
+
+.bi-x-lg {
+  color: red;
+}
+.cart-item .details {
+  width: 100%;
+}
+.title-price-x {
+  display: flex;
+  justify-content: space-between;
+}
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
 }
